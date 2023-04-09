@@ -23,7 +23,7 @@ const Work = styled.div`
 const WorkItem = styled.div`
   margin: 20px;
   &:hover {
-    color: red;
+    color: #39A989;
   }
   cursor: pointer;
 `;
@@ -31,7 +31,11 @@ const WorkItem = styled.div`
 export const NavBar = ({ pageSetterCallback }) => (
   <Wrapper>
     <LeftBox>
-      dylanh
+      <WorkItem
+        onClick={() => pageSetterCallback( 'home' )}
+      >
+        dylanh
+      </WorkItem>
     </LeftBox>
     <Work>
       <WorkItem

@@ -16,6 +16,7 @@ const Main = styled.div`
   height: calc( 100vh - 64px );
   width: 100%;
   align-items: center;
+  max-width: 1200px;
 `;
 
 const Body = styled.div`
@@ -44,18 +45,6 @@ function App() {
         />
       <Body>
         {pageRenderer}
-        <div className="card">
-          <LoginForm />
-          <button onClick={() => setCount((count) => count + 1)}>
-            count is {count}
-          </button>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test HMR
-          </p>
-        </div>
-        <p className="read-the-docs">
-          reach out to me
-        </p>
       </Body>
       <Footer />
     </Main>
