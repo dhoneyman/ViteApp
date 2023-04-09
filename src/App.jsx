@@ -44,7 +44,6 @@ function App() {
         />
       <Body>
         {pageRenderer}
-        {/* <Lander /> */}
         <div className="card">
           <LoginForm />
           <button onClick={() => setCount((count) => count + 1)}>
