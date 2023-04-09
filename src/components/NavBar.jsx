@@ -21,23 +21,33 @@ const Work = styled.div`
   `;
 
 const WorkItem = styled.div`
-  padding: 6px;
+  margin: 20px;
+  &:hover {
+    color: red;
+  }
+  cursor: pointer;
 `;
 
-export const NavBar = () => (
+export const NavBar = ({ pageSetterCallback }) => (
   <Wrapper>
     <LeftBox>
       dylanh
     </LeftBox>
     <Work>
-      <WorkItem>
-        one
+      <WorkItem
+        onClick={() => pageSetterCallback( 'home' )}
+      >
+        home
       </WorkItem>
-      <WorkItem>
-        two
+      <WorkItem
+        onClick={() => pageSetterCallback( 'projects' )}
+      >
+        projects
       </WorkItem>
-      <WorkItem>
-        three
+      <WorkItem
+        onClick={() => pageSetterCallback( 'work' )}
+      >
+        work
       </WorkItem>
     </Work>
   </Wrapper>

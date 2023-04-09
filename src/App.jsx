@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { useState, useCallback, useMemo } from 'react'
 import styled from "@emotion/styled";
 import {
   LoginForm,
   NavBar,
   Lander,
-  Footer
+  Footer,
+  Projects,
+  Work
 } from './components'
 import './App.css'
 
@@ -23,13 +25,26 @@ const Body = styled.div`
 `;
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [ page, setPage ] = useState( 'home' );
+  const [count, setCount] = useState(0);
+  const pageSetterCallback = useCallback(( page ) => {
+    setPage( page );
+  }, []);
+
+  const pageRenderer = useMemo(() => {
+    if ( page === 'projects' ) return <Projects />
+    if ( page === 'work' ) return <Work />
+    return <Lander />
+  }, [ page ]);
 
   return (
     <Main className="App">
-      <NavBar />
+      <NavBar
+        pageSetterCallback={pageSetterCallback}
+        />
       <Body>
-        <Lander />
+        {pageRenderer}
+        {/* <Lander /> */}
         <div className="card">
           <LoginForm />
           <button onClick={() => setCount((count) => count + 1)}>
