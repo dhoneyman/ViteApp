@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { ReactComponent as LightningBolt } from "../assets/lightning.svg";
 
 const Wrapper = styled.div`
   display: flex;
@@ -10,7 +11,10 @@ const Wrapper = styled.div`
 `;
 
 const LeftBox = styled.div`
+  display: flex;
+  flex-direction: row;
   left: 0;
+  align-items: center;
 `;
 
 const Work = styled.div`
@@ -21,17 +25,24 @@ const Work = styled.div`
   `;
 
 const WorkItem = styled.div`
-  margin: 20px;
+  margin: ${(props) => !!props.leftItem ? '0px' : '20px'};
   &:hover {
     color: #39A989;
   }
   cursor: pointer;
 `;
 
+const StyledBolt = styled( LightningBolt )`
+  font-size: 50px;
+  color: white;
+`;
+
 export const NavBar = ({ pageSetterCallback }) => (
   <Wrapper>
     <LeftBox>
+      <StyledBolt />
       <WorkItem
+        leftItem
         onClick={() => pageSetterCallback( 'home' )}
       >
         dylanh

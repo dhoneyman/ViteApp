@@ -26,10 +26,10 @@ export const Lander = () => (
   <Wrapper>
     <Bio>
       <StyledH1>
-        Hi I'm dylan
+        Hi, I'm dylan.
       </StyledH1>
       <StyledH2>
-          I'm a software developer living and breathing in Fort Collins Colorado. I currently work at Encapture, helping to build a platform to allow customers to automate their document processing solutions.
+          I'm a full stack developer living and playing in Fort Collins, Colorado. I currently work at Encapture, helping to build a platform to allow customers to automate their document processing solutions.
       </StyledH2>
     </Bio>
 
