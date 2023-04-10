@@ -1,26 +1,6 @@
 import styled from "@emotion/styled";
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-top: 60px;
-`;
-
-const StyledH1 = styled.h1`
-  margin-bottom: 4px;
-`;
-
-const StyledH2 = styled.h2`
-  margin-bottom: 4px;
-  font-style: italic;
-  font-weight: 100;
-`;
-
-const Bio = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-`;
+import { StyledH1, StyledH2 } from '../shared/typography'
+import{ Wrapper, Bio } from '../shared/boxes'
 
 export const Lander = () => (
   <Wrapper>
