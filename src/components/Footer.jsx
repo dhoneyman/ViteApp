@@ -3,9 +3,9 @@ import styled from "@emotion/styled";
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  align-items:
+  margin-top: 20px;
 `;
 
 const ContactItem = styled.a`

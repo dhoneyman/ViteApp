@@ -55,14 +55,14 @@ export const NavBar = ({ pageSetterCallback }) => (
         home
       </WorkItem>
       <WorkItem
-        onClick={() => pageSetterCallback( 'projects' )}
-      >
-        projects
-      </WorkItem>
-      <WorkItem
         onClick={() => pageSetterCallback( 'work' )}
       >
         work
+      </WorkItem>
+      <WorkItem
+        onClick={() => pageSetterCallback( 'projects' )}
+      >
+        projects
       </WorkItem>
     </Work>
   </Wrapper>
